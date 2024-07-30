@@ -46,6 +46,7 @@ Aqui está um exemplo do código principal:
 
 python
 Copiar código
+
 import tkinter as tk
 from tkinter import font
 
@@ -114,6 +115,8 @@ result_label = tk.Label(main_frame, text="", bg=background_color, fg="white", fo
 result_label.grid(row=3, column=0, columnspan=2, pady=10)
 canvas_barra = tk.Canvas(main_frame, width=200, height=20, bg="grey", highlightthickness=0)
 root.mainloop()
+
+
 
 ## Licença
 
