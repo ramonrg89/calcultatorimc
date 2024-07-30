@@ -67,18 +67,18 @@ from tkinter import font
 			altura = float(entry_altura.get())
 			imc = peso / (altura * altura)
 			
-			if imc &lt; 18.59:
-				classificacao = "Abaixo do peso"				
-			elif 18.5 &lt;= imc &lt; 24.99:
-				classificacao = "Peso normal"				
-			elif 25 &lt;= imc &lt; 29.99:
-				classificacao = "Sobrepeso"
-			elif 30 &lt;= imc &lt; 34.99:
-				classificacao = "Obesidade grau 1"
-			elif 35 &lt;= imc &lt; 39.99:
-				classificacao = "Obesidade grau 2"
-			else:
-				classificacao = "Obesidade grau 3"
+			if imc < 18.59:
+		            classificacao = "Abaixo do peso"
+		        elif 18.5 <= imc < 24.99:
+		            classificacao = "Peso normal"
+		        elif 25 <= imc < 29.99:
+		            classificacao = "Sobrepeso"
+		        elif 30 <= imc < 34.99:
+		            classificacao = "Obesidade grau 1"
+		        elif 35 <= imc < 39.99:
+		            classificacao = "Obesidade grau 2"
+		        else:
+		            classificacao = "Obesidade grau 3"
 			
 			result_label.config(text=f"IMC: {imc:.2f} \\n({classificacao})")
 			
