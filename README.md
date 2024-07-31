@@ -55,66 +55,6 @@
     <li>Um Canvas para mostrar a barra colorida representando a categoria do IMC.</li>
 </ul>
 
-<h2>Exemplo de Código</h2>
-<p>Aqui está um exemplo do código principal:</p>
-<pre class="code-example">
-<code>import tkinter as tk
-from tkinter import font
-		
-	def calculate():
-		try:
-			peso = float(entry_peso.get())
-			altura = float(entry_altura.get())
-			imc = peso / (altura * altura)
-			
-			if imc < 18.59:
-		            classificacao = "Abaixo do peso"
-		        elif 18.5 <= imc < 24.99:
-		            classificacao = "Peso normal"
-		        elif 25 <= imc < 29.99:
-		            classificacao = "Sobrepeso"
-		        elif 30 <= imc < 34.99:
-		            classificacao = "Obesidade grau 1"
-		        elif 35 <= imc < 39.99:
-		            classificacao = "Obesidade grau 2"
-		        else:
-		            classificacao = "Obesidade grau 3"
-			
-			result_label.config(text=f"IMC: {imc:.2f} \\n({classificacao})")
-			
-		except ValueError:
-			result_label.config(text="Por favor, insira valores válidos.")
-	
-	root = tk.Tk()
-
-	root.title("Calculadora IMC")
-	root.geometry("300x300")
-	root.configure(bg=background_color)
- 
-	main_frame = tk.Frame(root, bg=background_color)
-	main_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
-	frame = tk.Frame(main_frame, bg=background_color)
-	frame.grid(row=0, column=0)
- 
-	label_altura = tk.Label(frame, text="Altura(m):", bg=background_color, fg="white", font=(fonte, font_size), width=12, anchor="e")
-	label_altura.grid(row=0, column=0, padx=5, pady=5)
-	entry_altura = tk.Entry(frame, font=(fonte, font_size), width=12)
-	entry_altura.grid(row=0, column=1, padx=5, pady=5)
- 
-	label_peso = tk.Label(frame, text="Peso(kg):", bg=background_color, fg="white", font=(fonte, font_size), width=12, anchor="e")
-	label_peso.grid(row=1, column=0, padx=5, pady=5)
-	entry_peso = tk.Entry(frame, font=(fonte, font_size), width=12)
-	entry_peso.grid(row=1, column=1, padx=5, pady=5)
- 
-	button = tk.Button(main_frame, text="Calcular IMC", width=12, command=calculate)
-	button.grid(row=2, column=0, pady=20)
-
-	result_label = tk.Label(main_frame, text="", bg=background_color, fg="white", font=("Arial", font_size))
-	result_label.grid(row=3, column=0, columnspan=2, pady=10)
- 
-	root.mainloop()
-</code></pre>
-
 <h2>Licença</h2>
 <p>Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.</p>
 
